@@ -1,0 +1,779 @@
+import time
+import random
+
+
+print('En este juego su objetivo sera encontrar la clave para ir al siguiente nivel ')
+time.sleep(2)
+
+algo = ''
+while len(algo) == 0:
+    algo = input('Escriba algo para continuar: ')
+
+for i in range (3, 0, -1):
+    print(i)
+    time.sleep(0.25)
+print('Empezemos!!!')
+
+print(' ')
+
+
+print('NIVEL 1')
+print(' ')
+print('En este primer nivel la clave estara entre los numeros 0 - 10')
+print('Suerte')
+
+print(' ')
+
+while True:
+    answer = input("Escriba la clave: ")
+    if answer == str(10):
+        print("Wow, pasaste el primer nivel")
+        break
+    else:
+        print("Esa clave no es correcta, vuelva a intentar")
+        print(' ')
+
+print(' ')
+print(' ')
+
+
+
+
+print('NIVEL 2')
+print(' ')
+print('En este segundo nivel la clave estara entre los numeros 0 - 15')
+print('Suerte')
+
+print(' ')
+print('Al termino de cada nivel podras elejir 1 de los siguientes personajes')
+print(' ')
+print('Un cazador que te ayudara sumandole 1 al numero que elijas')
+print('Un miedoso que le restara 1 al numero que elijas')
+print('Un perro que eligira un numero aleatorio')
+print(' ')
+
+
+personaje_1 = (input('Elija al personaje que desee agregar: '))
+
+if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+    print('Has elejido al CAZADOR')
+
+if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+    print('Has elejido al MIEDOSO')
+
+if personaje_1 == 'perro' or personaje_1 == 'Perro':
+    print('Has elejido al PERRO')
+
+print(' ')
+
+while True:
+    answer = ''
+    while len(answer) == 0:
+        answer = input("Escriba la clave: ")
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        robot = answer
+        robot = (int(robot))
+        a_robot = sum([robot, 1])
+        print('Cazador: ' + str(a_robot))
+
+        if a_robot == (int(11)):
+            print("Wow, CAZADOR paso el segundo nivel")
+            break
+
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        miedoso = answer
+        miedoso = int(miedoso)
+
+        lista = [1]
+        a_miedoso = miedoso - lista[0]
+        print('Miedoso: ' + str(a_miedoso))
+
+        if a_miedoso == (int(11)):
+            print("Wow, MIEDOSO paso el cuarto nivel")
+            break
+
+
+    if personaje_1 == 'perro' or personaje_1 == 'Perro':
+        lista_numeros = list(range(0, 16))
+
+        perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(perro_1))
+
+
+    if answer == str(11):
+        print("Wow, pasaste el segundo nivel")
+        break
+
+
+    else:
+        print("Esa clave no es correcta, vuelva a intentar")
+        print(' ')
+
+print(' ')
+print(' ')
+
+
+
+
+import random
+
+print('NIVEL 3')
+print(' ')
+print('En este tercer nivel la clave estara entre los numeros 0 - 35')
+print('Suerte')
+
+print(' ')
+print('Al termino de cada nivel podras elejir 1 de los siguientes personajes')
+print(' ')
+print('Un cazador que te ayudara sumandole 1 al numero que elijas')
+print('Un miedoso que le restara 1 al numero que elijas')
+print('Un perro que eligira un numero aleatorio')
+print(' ')
+
+
+personaje_2 = (input('Elija al personaje que desee agregar: '))
+
+if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+    print('Has elejido al CAZADOR')
+
+if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+    print('Has elejido al MIEDOSO')
+
+if personaje_2 == 'perro' or personaje_2 == 'Perro':
+    print('Has elejido al PERRO')
+
+print(' ')
+
+while True:
+    answer = ''
+    while len(answer) == 0:
+        answer = input("Escriba la clave: ")
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        uno_robot = answer
+        uno_robot = (int(uno_robot))
+        a_robot = sum([uno_robot, 1])
+        print('Cazador: ' + str(a_robot))
+
+        if a_robot == (int(23)):
+            print("Wow, CAZADOR paso el segundo nivel")
+            break
+
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        uno_miedoso = answer
+        uno_miedoso = int(uno_miedoso)
+
+        lista = [1]
+        a_miedoso = uno_miedoso - lista[0]
+        print('Miedoso: ' + str(a_miedoso))
+
+        if a_miedoso == (int(23)):
+            print("Wow, MIEDOSO paso el cuarto nivel")
+            break
+
+
+    if personaje_1 == 'perro' or personaje_1 == 'Perro':
+        lista_numeros = list(range(0, 36))
+
+        uno_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(uno_perro_1))
+
+        if uno_perro_1 == (int(23)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 2])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(23)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 1])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(23)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [2]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(23)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [1]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(23)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+    if personaje_2 == 'perro' or personaje_2 == 'Perro':
+        lista_numeros = list(range(0, 36))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(23)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+
+    if answer == str(23):
+        print("Wow, pasaste el segundo nivel")
+        break
+
+
+    else:
+        print("Esa clave no es correcta, vuelva a intentar")
+        print(' ')
+
+print(' ')
+print(' ')
+
+
+
+
+import random
+
+print('NIVEL 4')
+print(' ')
+print('En este cuarto nivel la clave estara entre los numeros 0 - 40')
+print('Suerte')
+
+print(' ')
+print('Al termino de cada nivel podras elejir 1 de los siguientes personajes')
+print(' ')
+print('Un cazador que te ayudara sumandole 1 al numero que elijas')
+print('Un miedoso que le restara 1 al numero que elijas')
+print('Un perro que eligira un numero aleatorio')
+print(' ')
+
+
+personaje_3 = (input('Elija al personaje que desee agregar: '))
+
+if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+    print('Has elejido al CAZADOR')
+
+if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+    print('Has elejido al MIEDOSO')
+
+if personaje_3 == 'perro' or personaje_3 == 'Perro':
+    print('Has elejido al PERRO')
+
+
+print('')
+
+while True:
+    answer = ''
+    while len(answer) == 0:
+        answer = input("Escriba la clave: ")
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        uno_robot = answer
+        uno_robot = (int(uno_robot))
+        a_robot = sum([uno_robot, 1])
+        print('Cazador: ' + str(a_robot))
+
+        if a_robot == (int(36)):
+            print("Wow, CAZADOR paso el segundo nivel")
+            break
+
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        uno_miedoso = answer
+        uno_miedoso = int(uno_miedoso)
+
+        lista = [1]
+        a_miedoso = uno_miedoso - lista[0]
+        print('Miedoso: ' + str(a_miedoso))
+
+        if a_miedoso == (int(36)):
+            print("Wow, MIEDOSO paso el cuarto nivel")
+            break
+
+
+    if personaje_1 == 'perro' or personaje_1 == 'Perro':
+        lista_numeros = list(range(0, 41))
+
+        uno_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(uno_perro_1))
+
+        if uno_perro_1 == (int(36)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+
+
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 2])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(36)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 1])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(36)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [2]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(36)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [1]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(36)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+
+    if personaje_2 == 'perro' or personaje_2 == 'Perro':
+        lista_numeros = list(range(0, 41))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(36)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 3])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(36)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if not personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 1])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(36)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if not personaje_2 == 'cazador' or personaje_1 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 2])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(36)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_1 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 2])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(36)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [3]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(36)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if not personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [1]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(36)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if not personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [2]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(36)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [2]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(36)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+
+    if personaje_3 == 'perro' or personaje_3 == 'Perro':
+        lista_numeros = list(range(0, 41))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(36)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+
+    if answer == str(36):
+        print("Wow, pasaste el segundo nivel")
+        break
+
+
+    else:
+        print("Esa clave no es correcta, vuelva a intentar")
+        print(' ')
+
+print(' ')
+print(' ')
+
+
+
+
+import random
+
+print('NIVEL 5')
+print(' ')
+print('En este quinto nivel la clave estara entre los numeros 0 - 50')
+print('En este nivel tendras a un cazador que te ayudara sumandole 1 al numero que elijas')
+print('Un miedoso que le restara 1 al numero que elijas')
+print('Adicionalmente, tendras a 3 perros que eligiran un numero aleatorio')
+print('Suerte')
+
+print(' ')
+print('A partir ddel nivel 5, solo se pueden agregar perros')
+print(' ')
+print('Un perro que eligira un numero aleatorio')
+print(' ')
+
+
+personaje_4 = (input('Agregar al perro: '))
+
+if personaje_4 == 'perro' or personaje_4 == 'Perro':
+    print('Has elejido al PERRO')
+
+
+print('')
+
+while True:
+    answer = ''
+    while len(answer) == 0:
+        answer = input("Escriba la clave: ")
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        uno_robot = answer
+        uno_robot = (int(uno_robot))
+        a_robot = sum([uno_robot, 1])
+        print('Cazador: ' + str(a_robot))
+
+        if a_robot == (int(20)):
+            print("Wow, CAZADOR paso el segundo nivel")
+            break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        uno_miedoso = answer
+        uno_miedoso = int(uno_miedoso)
+
+        lista = [1]
+        a_miedoso = uno_miedoso - lista[0]
+        print('Miedoso: ' + str(a_miedoso))
+
+        if a_miedoso == (int(20)):
+            print("Wow, MIEDOSO paso el cuarto nivel")
+            break
+
+    if personaje_1 == 'perro' or personaje_1 == 'Perro':
+        lista_numeros = list(range(0, 51))
+
+        uno_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(uno_perro_1))
+
+        if uno_perro_1 == (int(20)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 2])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(20)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            dos_robot = answer
+            dos_robot = (int(dos_robot))
+            a_robot = sum([dos_robot, 1])
+            print('Cazador: ' + str(a_robot))
+
+            if a_robot == (int(20)):
+                print("Wow, CAZADOR paso el segundo nivel")
+                break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [2]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(20)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            dos_miedoso = answer
+            dos_miedoso = int(dos_miedoso)
+
+            lista = [1]
+            a_miedoso = dos_miedoso - lista[0]
+            print('Miedoso: ' + str(a_miedoso))
+
+            if a_miedoso == (int(20)):
+                print("Wow, MIEDOSO paso el cuarto nivel")
+                break
+
+    if personaje_2 == 'perro' or personaje_2 == 'Perro':
+        lista_numeros = list(range(0, 51))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(20)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+
+
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 3])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(20)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if not personaje_2 == 'cazador' or personaje_2 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 1])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(20)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if not personaje_2 == 'cazador' or personaje_1 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 2])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(20)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+    if not personaje_1 == 'cazador' or personaje_1 == 'Cazador':
+        if personaje_2 == 'cazador' or personaje_1 == 'Cazador':
+            if personaje_3 == 'cazador' or personaje_3 == 'Cazador':
+                dos_robot = answer
+                dos_robot = (int(dos_robot))
+                a_robot = sum([dos_robot, 2])
+                print('Cazador: ' + str(a_robot))
+
+                if a_robot == (int(20)):
+                    print("Wow, CAZADOR paso el segundo nivel")
+                    break
+
+
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [3]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(20)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if not personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [1]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(20)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if not personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [2]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(20)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if not personaje_1 == 'miedoso' or personaje_1 == 'Miedoso':
+        if personaje_2 == 'miedoso' or personaje_2 == 'Miedoso':
+            if personaje_3 == 'miedoso' or personaje_3 == 'Miedoso':
+                dos_miedoso = answer
+                dos_miedoso = int(dos_miedoso)
+
+                lista = [2]
+                a_miedoso = dos_miedoso - lista[0]
+                print('Miedoso: ' + str(a_miedoso))
+
+                if a_miedoso == (int(20)):
+                    print("Wow, MIEDOSO paso el cuarto nivel")
+                    break
+
+    if personaje_3 == 'perro' or personaje_3 == 'Perro':
+        lista_numeros = list(range(0, 51))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(20)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+
+    if personaje_4 == 'perro' or personaje_4 == 'Perro':
+        lista_numeros = list(range(0, 51))
+
+        dos_perro_1 = random.choice(lista_numeros)
+        print('Perro: ' + str(dos_perro_1))
+
+        if dos_perro_1 == (int(20)):
+            print("Wow, PERRO paso el cuarto nivel")
+            break
+    else:
+        print("Esa clave no es correcta, vuelva a intentar")
+        print(' ')
+
+print(' ')
+print(' ')
